@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Arfa - Anggota 1</title>
+    <link rel="stylesheet" href="style.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Poppins:wght@300;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <style>
+        :root {
+            --member-color: #6f42c1; /* WARNA KHUSUS ARFA (UNGU) */
+            --accent-soft: #ffc107; 
+        }
+        /* [Kode CSS yang tidak berubah dari template sebelumnya] */
+        body { background-color: #f0f8ff; } 
+        .profile-page-container {
+            padding-top: 100px; padding-bottom: 50px; min-height: 100vh;
+            display: flex; flex-direction: column; align-items: center;
+        }
+        .profile-card {
+            background-color: white; padding: 40px; border-radius: 15px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1); max-width: 900px;
+            width: 90%; text-align: left; border-left: 8px solid var(--member-color); 
+            animation: slideUp 1s ease-out forwards; opacity: 0;
+        }
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .profile-photo-detail {
+            width: 180px; height: 180px; border-radius: 50%; object-fit: cover;
+            border: 5px solid var(--member-color); margin: 0 auto 20px auto;
+            display: block; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); transition: transform 0.3s;
+        }
+        .profile-photo-detail:hover { transform: scale(1.05); }
+        .profile-card h1 { color: var(--member-color); font-size: 3em; margin-bottom: 5px; text-align: center; }
+        .profile-card h2 { color: #6c757d; font-size: 1.5em; text-align: center; margin-bottom: 30px; border-bottom: 2px solid var(--accent-soft); padding-bottom: 10px; }
+        .section-detail { margin-top: 30px; padding: 20px; background-color: #fafafa; border-radius: 10px; }
+        .section-detail h4 { color: var(--member-color); border-left: 4px solid var(--accent-soft); padding-left: 10px; margin-bottom: 15px; font-size: 1.3em; }
+        .back-button {
+            display: inline-block; margin-top: 30px; padding: 10px 20px;
+            background-color: #343a40; color: white; text-decoration: none;
+            border-radius: 5px; transition: background-color 0.3s;
+        }
+        .back-button:hover { background-color: #1d2124; }
+        .cv-list {
+            display: grid;
+            grid-template-columns: 150px 1fr; 
+            gap: 10px;
+            margin-top: 15px;
+        }
+        .cv-list strong {
+            color: #555;
+            font-weight: 600;
+        }
+        
+        /* GAYA BARU ARFA: GRID 2 KOLOM UNTUK DETAIL */
+        .cv-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* Membagi dua kolom sama besar */
+            gap: 30px;
+        }
+        @media (max-width: 768px) {
+            .cv-grid {
+                grid-template-columns: 1fr; /* Kembali ke satu kolom saat di mobile */
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">ELANG GRUP</div>
+        <div class="nav-links">
+            <a href="index.html">Beranda Tim</a>
+            <a href="#about">Tentang</a>
+        </div>
+    </nav>
+
+    <div class="profile-page-container">
+        <div class="profile-card">
+            
+            <img src="arfa.jpg" alt="Foto Resmi Arfa" class="profile-photo-detail">
+            
+            <h1>ARFA</h1>
+            <h2>Anggota 1 | Motto: "Bahagia bukan tujuan, melainkan cara menjalani perjalanan."</h2>
+            
+            <div class="section-detail">
+                <h4><i class="fas fa-user-circle"></i> Tentang Saya</h4>
+                <p>Anggota 1. Lebih suka bermain, jika belajar harus dalam kondisi santai dan tidak tergesa-gesa main gitar.</p>
+            </div>
+
+            <div class="cv-grid">
+                
+                <div class="grid-item">
+                    <div class="section-detail" style="margin-top: 0;">
+                        <h4><i class="fas fa-id-card"></i> Data Diri & Pendidikan</h4>
+                        <div class="cv-list">
+                            <strong>Nama Lengkap</strong>: Arfa Faraz Rasyid 
+                            <strong>Sekolah</strong>: SMKN 1 SOREANG
+                            <strong>Jurusan</strong>: Teknik Jaringan Dan Telekomunikasi
+                            <strong>Alamat</strong>: MHI. No.150 RT.02 RW.12
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid-item">
+                    <div class="section-detail" style="margin-top: 0;">
+                        <h4><i class="fas fa-cogs"></i> Keterampilan & Hobi</h4>
+                        <div class="cv-list">
+                            <strong>Keterampilan</strong>: Main Gitar
+                            <strong>Hobi</strong>: Menganggu orang
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="section-detail">
+                <h4><i class="fas fa-phone"></i> Kontak</h4>
+                <div class="cv-list">
+                    <strong>Nomor HP</strong>: 0895-0997-5498
+                    <strong>E-mail (Gmail)</strong>: arfadilo447@gmail.com
+                </div>
+            </div>
+
+
+            <a href="index.html#team-section" class="back-button"><i class="fas fa-chevron-left"></i> Kembali ke Daftar Tim</a>
+        </div>
+    </div>
+</body>
+</html>

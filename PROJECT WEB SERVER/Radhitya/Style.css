@@ -1,0 +1,70 @@
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background: #e8f8ec;
+}
+
+/* HEADER BARU */
+.hero {
+    background: linear-gradient(135deg, #1b5e20, #2e7d32);
+    padding: 60px 20px 80px;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+.foto-profil img {
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid white;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    margin-bottom: 10px;
+}
+
+.hero h1 {
+    font-size: 32px;
+    margin: 5px 0;
+}
+
+.hero .sub {
+    opacity: 0.9;
+}
+
+/* GRID 3 KOLOM MODERN */
+.content {
+    width: 90%;
+    margin: -40px auto 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 18px rgba(0,0,0,0.12);
+    animation: fadeUp 0.8s forwards;
+}
+
+.card h2 {
+    color: #1b5e20;
+    margin-top: 0;
+}
+
+.card ul {
+    padding-left: 18px;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

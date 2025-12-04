@@ -1,0 +1,80 @@
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background: #ffd6e8;
+}
+
+/* Wrapper */
+.container {
+    width: 900px;
+    margin: 40px auto;
+    display: flex;
+    border-radius: 15px;
+    overflow: hidden;
+    background: white;
+    box-shadow: 0 0 20px rgba(0,0,0,0.15);
+}
+
+/* Kiri */
+.left {
+    width: 35%;
+    background: #ff8ab8;
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+.profile-img img {
+    width: 140px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 3px solid white;
+    box-shadow: 0 0 10px rgba(255,255,255,0.7);
+}
+
+.nama {
+    margin: 15px 0 5px;
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.role {
+    font-size: 16px;
+    opacity: 0.8;
+}
+
+.info-box {
+    margin-top: 25px;
+    background: rgba(255,255,255,0.2);
+    padding: 15px;
+    border-radius: 10px;
+    text-align: left;
+}
+
+/* Kanan */
+.right {
+    width: 65%;
+    padding: 40px;
+}
+
+.judul {
+    margin-top: 0;
+    color: #d81b60;
+    border-left: 5px solid #e91e63;
+    padding-left: 10px;
+}
+
+.list {
+    margin-top: -5px;
+}
+
+.list li {
+    margin-bottom: 8px;
+}
+
+.desc {
+    margin-top: -5px;
+    line-height: 1.6;
+    color: #444;
+}

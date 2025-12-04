@@ -1,0 +1,116 @@
+/* Background Ungu Dinamis */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #5e00b8, #8e24aa, #b832f7);
+    background-size: 400% 400%;
+    animation: gradientMove 12s infinite alternate ease-in-out;
+    color: white;
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+/* Container */
+.container {
+    max-width: 750px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    padding: 20px;
+    border-radius: 15px;
+    animation: fadeIn 1.5s ease;
+}
+
+.profil-img {
+    width: 140px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 3px solid rgba(255,255,255,0.5);
+}
+
+/* Kartu (box) */
+.box {
+    background: rgba(255,255,255,0.1);
+    padding: 20px;
+    margin-top: 25px;
+    border-radius: 12px;
+    backdrop-filter: blur(6px);
+    transition: 0.3s;
+}
+
+.box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(255,255,255,0.2);
+}
+
+/* Animasi */
+.fade-in { animation: fadeIn 1.3s ease; }
+.slide-up { animation: slideUp 1.2s ease; }
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Line */
+.line {
+    height: 2px;
+    width: 100%;
+    background: #fff;
+    margin: 8px 0 15px;
+    opacity: 0.6;
+}
+
+/* Skill Add */
+.skill-add {
+    display: flex;
+    margin-top: 10px;
+}
+
+.skill-add input {
+    flex: 1;
+    padding: 8px;
+    border-radius: 8px;
+    border: none;
+}
+
+.skill-add button {
+    margin-left: 8px;
+    padding: 8px 12px;
+    background: white;
+    color: #8e24aa;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    margin-top: 25px;
+    opacity: 0.75;
+    font-size: 14px;
+}
+
+.glow {
+    animation: glowPulse 3s infinite alternate;
+}
+
+@keyframes glowPulse {
+    0% { text-shadow: 0 0 5px white; }
+    100% { text-shadow: 0 0 18px white; }
+}

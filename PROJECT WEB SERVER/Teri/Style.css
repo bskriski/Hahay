@@ -1,0 +1,165 @@
+/* Variabel Warna (Memudahkan perubahan tema) */
+:root {
+    --primary-color: #80bfff; /* Biru Muda Utama */
+    --secondary-color: #b3e5fc; /* Biru Muda Lebih Pucat */
+    --text-dark: #333;
+    --text-light: #f4f4f4;
+    --bg-light: #ffffff;
+}
+
+/* Dasar & Font */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f8ff; /* Latar Belakang sangat Pucat */
+    color: var(--text-dark);
+    line-height: 1.6;
+    padding: 20px;
+}
+
+.cv-container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: var(--bg-light);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Header CV (Biru Muda Dominan) */
+#cv-header {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    padding: 40px 30px;
+    text-align: center;
+    animation: fadeInDown 1s ease-out; /* Animasi Masuk */
+}
+#cv-header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    font-weight: 700;
+}
+#cv-header p {
+    margin: 5px 0 0;
+    font-size: 1.1em;
+    font-weight: 300;
+}
+
+/* Ringkasan dan Foto */
+.summary-photo {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    padding: 30px;
+    border-bottom: 3px solid var(--secondary-color);
+}
+.photo-container {
+    flex-shrink: 0;
+}
+#profile-photo {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid var(--secondary-color);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Bagian Konten Utama (Pengalaman vs Keterampilan) */
+.content-flex {
+    display: flex;
+    gap: 30px;
+    padding: 30px;
+}
+
+/* Bagian CV Umum */
+.section {
+    padding: 0;
+    margin-bottom: 20px;
+}
+.section h2 {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+    font-size: 1.4em;
+}
+.skills-section, .experience-section {
+    flex: 1; /* Agar membagi lebar sama */
+}
+.experience-section {
+    border-left: 1px solid #eee; /* Garis pemisah visual */
+    padding-left: 30px;
+}
+
+/* Gaya Dinamis */
+.item-card {
+    background: #f8f8f8;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    border-left: 5px solid var(--secondary-color);
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out; /* Animasi Hover */
+    animation: fadeIn 1.5s ease-out; /* Animasi Masuk */
+}
+.item-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+.item-card h3 {
+    margin: 0 0 5px;
+    color: var(--primary-color);
+}
+.item-card p.meta {
+    font-size: 0.9em;
+    color: #666;
+    margin: 0 0 10px;
+}
+
+/* List Keterampilan Keren */
+.skill-badge {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: var(--text-dark);
+    padding: 8px 15px;
+    border-radius: 20px;
+    margin: 5px 8px 5px 0;
+    font-size: 0.9em;
+    font-weight: 500;
+    transition: background-color 0.2s;
+}
+.skill-badge:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Keyframe Animasi */
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Responsif HP */
+@media (max-width: 768px) {
+    .cv-container {
+        padding: 0;
+        box-shadow: none;
+    }
+    .summary-photo {
+        flex-direction: column-reverse; /* Foto di atas ringkasan di HP */
+        text-align: center;
+    }
+    .content-flex {
+        flex-direction: column; /* Tumpuk Keterampilan dan Pengalaman */
+        padding: 15px;
+    }
+    .experience-section {
+        border-left: none;
+        padding-left: 0;
+        border-top: 1px solid #eee;
+        padding-top: 20px;
+    }
+}
